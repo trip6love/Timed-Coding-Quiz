@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin:auto;
-    width: 80%;
+    width: 85%;
 }
 
 /* Change color of text when hovering */
@@ -80,3 +80,85 @@ p {
 
 
 /* END STYLES */
+.end h1, .end p {
+    text-align: left;
+}
+
+.end input {
+    outline: black, thick;
+    padding: 5px;
+    width: 40%;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.end input:focus {
+    border: 3px solid green;
+}
+
+.on {
+    display: flex;
+}
+
+
+.off {
+    display: none;
+}
+
+#question {
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+#high-score {
+    text-align: left;
+}
+
+/* Button Styles */
+.btn {
+    background: hotpink;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: black;
+    box-shadow: 0 4px black;
+}
+
+.btn-list {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 5px;
+    margin: 25px 0;
+}
+
+.start {
+    width: 20%;
+    margin-top: 10px;
+}
+
+.answerbtn {
+    width: 50%;
+    text-align: left;
+}
+
+/* hidden */
+.banner {
+    font-size: 30px;
+    text-align: center;
+    color: gray;
+    margin: 0 100px;
+}
+
+.banner h2 {
+    border-top: 2px solid gray;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* list styles */
+ol {
+    list-style-type: decimal; 
+}
+
