@@ -23,7 +23,7 @@ header {
 /* Change color of text when hovering */
 #high-scores:hover {
     cursor: pointer;
-    color: green;
+    color: purple;
 }
 
 /*  header h3 style */
@@ -140,6 +140,17 @@ p {
 .answerbtn {
     width: 50%;
     text-align: left;
+}
+
+.btn:hover {
+    background: greenyellow;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:active {
+    border: none;
+    outline: none;
 }
 
 /* hidden */
