@@ -20,7 +20,63 @@ header {
     width: 80%;
 }
 
+/* Change color of text when hovering */
 #high-scores:hover {
     cursor: pointer;
     color: green;
 }
+
+/*  header h3 style */
+header h3 {
+    padding-left: 20px;
+    display:inline;
+}
+
+/* timer styles */
+.time {
+    text-align: right;
+    display: inline;
+    padding-right: 20px;
+    color: black;
+}
+
+/* box styles and main content */
+.box {
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+}
+
+/* header 1 */
+
+h1 {
+    color: black;
+    font-weight: bold;
+}
+
+/* paragraph style */
+p {
+    color: black;
+}
+
+/* Starter styles */
+.start {
+    align-items: center;
+    text-align: center;
+}
+
+.start h1, .start p {
+    text-align: center;
+}
+
+/* questions styles */
+.questions {
+    align-items: flex-start;
+    padding: 40px 20px;
+    margin: auto;
+    justify-content: flex-start;
+}
+
+
+/* END STYLES */
