@@ -10,13 +10,49 @@
 
 <!-- ADD MAIN CONTENT -->
     <body>
-        <!--Add Header Content-->
+        <!-- Add Header Content -->
         <header>
             <h3 id="high-scores"> View High Scores! </h3>
             <h3 class="time">Time: <span id="time"> </span> </h3>
         </header>
 
-    <!--ADD SCRIPT LINK -->
+        <!-- Add Content -->
+
+        <!-- Starting Screen -->
+        <div id="home-screen" class="on">
+            <div class="home-on">
+                <h1>Coding Quiz Challenge!</h1>
+                <p>
+                    Answer the following questions on coding-related topics to the best of your ability, and within the time limit! If you answer the question correctly you will gain 8 points! However, if you answer the question incorrectly your score will be penalized by 3 points and the time will subtract 5 seconds. GOODLUCK! 
+                </p>
+                <button class="btn-start" id="start-quiz">Start Quiz!</button>
+            </div>
+        </div>
+
+        <!-- Add Questions -->
+        <div id="question-box" class="off">
+            <div class="box questions">
+                <div class="question"></div>
+                <div id="answer-buttons" class="btn-list"></div>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="off">
+            <div class="end">
+                <div id="score-banner">
+                    <h1>Game Over!</h1>
+                </div>
+                <form id="name-form" class="name">
+                    <p> Enter your name to save your score:
+                        <input type="text" name="name" id="name" class="text-input"/>
+                        <button class="btn-start" id="submit-high-score" type="submit">Submit Score!</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    <!-- ADD SCRIPT LINK -->
     <script src="./assets/script/script.js"></script>
     </body>
 
