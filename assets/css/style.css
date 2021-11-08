@@ -1,0 +1,21 @@
+/* Add universal styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    width: 80%;
+}
