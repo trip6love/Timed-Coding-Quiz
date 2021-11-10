@@ -30,3 +30,47 @@ var randomQuestions
 var questionIndex = 0
 
 // Game Questions //
+var questions = [
+    {
+       q: "",
+       a: "",
+       options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+    {
+        q: "",
+        a: "",
+        options: [{option: "1. "}, {option: "2. "}, {option: "2. "}, {option: "3. "}, {option: "4. "}]
+    },
+
+];
+
