@@ -3,6 +3,20 @@
     box-sizing: border-box;
 }
 
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    width: 85%;
+}
+
+/*  header h3 style */
+header h3 {
+    padding-left: 20px;
+    display:inline;
+}
+
 /* Body styles */
 body {
     background: white;
@@ -12,24 +26,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    margin:auto;
-    width: 85%;
-}
-
 /* Change color of text when hovering */
 #high-scores:hover {
     cursor: pointer;
     color: purple;
-}
-
-/*  header h3 style */
-header h3 {
-    padding-left: 20px;
-    display:inline;
 }
 
 /* timer styles */
