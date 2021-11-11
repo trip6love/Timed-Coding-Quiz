@@ -4,7 +4,7 @@ var boxQuestionEl = document.getElementById("question-box");
 var boxEndEl = document.getElementById("end-box");
 var nameForm = document.getElementById("name-form");
 var boxHighScoreEl = document.getElementById("high-score-box");
-var ViewHighScoreEl = document.getElementById("high-scores");
+var viewHighScoreEl = document.getElementById("high-scores");
 var highScoreLsEl = document.getElementById("high-score-list");
 var boxScoreEl = document.getElementById("score-banner");
 var incorrectEl = document.getElementById("incorrect");
@@ -73,4 +73,77 @@ var questions = [
     },
 
 ];
+
+var startPage = function() {
+    boxHighScoreEl.classList.add("off");
+    boxHighScoreEl.classList.remove("on");
+    boxStartEl.classList.add("on");
+    boxStartEl.classList.add("off");
+    boxScoreEl.removeChild(boxScoreEl.lastChild)
+    points = 0
+    timeEl.textContent = 0
+    questionIndex = 0
+    gameOver = ""
+
+    if (correctEl.className = "on") {
+        correctEl.classList.add("off");
+        correctEl.classList.remove("on");
+    
+    } 
+    if (wrongEl.className = "show") {
+         
+        wrongEl.classList.remove("on");
+        wrongEl.classList.add("off");
+        
+    }
+    
+};
+
+// Setting Up The Timer //
+var timeLeft = function() {
+    timeleft = 60;
+
+    var checkTime = setInterval(function() {
+        timeEl.innerText = timeleft;
+        timeleft--
+
+        if (gameOver) {
+            clearInterval(checkTime)
+        }
+        if (timeleft < 0) {
+            viewPoints()
+            timerEl.innerText = 0
+            clearInterval(checkTime)
+        }
+
+        
+    }, 1000);
+};
+
+// Starting The Game //
+var gameStart = function() {
+    boxStartEl.classList.remove("on");
+    boxStartEl.classList.add("off");
+    boxQuestionEl.classList.add("on");
+    boxQuestionEl.classList.remove("off")
+
+    // Randomize The Questions //
+    randomQuestions = questions.sort(() => Math.random() - 0.5);
+    timeLeft();
+    setQuestion();
+};
+
+// Next Questions //
+var setQuestion = function() {
+    resetSolved()
+    displayQuestion(randomQuestions[questionIndex])
+};
+
+// Remove Buttons //
+var resetSolved = function () {
+    while (answerbuttonEl.firstChild) {
+        answerbuttonEl.removeChild(answerbuttonEl.firstChild);
+    };
+};
+
 
