@@ -146,4 +146,71 @@ var resetSolved = function () {
     };
 };
 
+// Display question and answer buttons
+var displayQuestion = function(index) {
+    questionsEl.innerText = index.q
+    for (var i = 0; i < index.choices.length; i++) {
+        var answerbtn = document.createElement("button");
+        answerbtn.innerText = index.options[i].choices
+        answerbtn.classList.add("answerbtn");
+        answerbtn.classList.add("btn");
+        answerbtn.addEventListener("click", checkAnswer)
+    }
+}
 
+// Check to see if it is correct or not //
+var checkAnswer = function(event) {
+    var selected = event.target
+        if (randomQuestions[questionIndex].a === selected.innerText) {
+            correctAnswer();
+            points = points + 8
+        } else {
+            incorrectAnswer()
+            points = points - 3;
+            timeleft = timeleft - 5;
+
+        };
+        questionIndex++
+            if (randomQuestions.length > questionIndex + 1) {
+                setQuestion();
+            } else {
+                gameOver = "true";
+                (viewPoints);
+            }
+    
+}
+
+// ALERT correct on users screen //
+var correctAnswer = function() {
+    if (correctEl.className = "off") {
+        correctEl.classList.remove("off");
+        correctEl.classList.add("banner");
+        wrongEl.classList.add("off");
+        wrongEl.classList.remove("banner");
+    }
+}
+
+// ALERT incorrect on users screen // 
+var incorrectAnswer = function() {
+    if (wrongEl.className = "off") {
+        wrongEl.classList.remove("off")
+        wrongEl.classList.add("banner")
+        correctEl.classList.add("off")
+        correctEl.classList.remove("banner")
+
+    }
+
+}
+
+// Show points at end game //
+var viewPoints = function() {
+    boxQuestionEl.classList.add("off");
+    boxEndEl.classList.remove("off");
+    boxEndEl.classList.add("show");
+
+    var pointView = document.createElement("p");
+    pointView.innerText = (" Final score is " + points + "!!!");
+    boxScoreEl.appendChild(pointView);
+}
+
+// HIGH SCORE FUNCTION //
