@@ -270,3 +270,41 @@ var loadRecords = function() {
     }
     
 }
+
+var displayRecords = function() {
+    boxHighScoreEl.classList.add("on");
+    boxHighScoreEl.classList.remove("off")
+    gameOver = "true"
+
+    if (boxEndEl.className = "on") {
+        boxEndEl.classList.add("off");
+        boxEndEl.classList.remove("on");
+    } 
+    if (boxStartEl.className = "on") {
+        boxStartEl.classList.add("off");
+        boxStartEl.classList.remove("on");
+    }
+    if (boxQuestionEl.className = "on") {
+        boxQuestionEl.classList.add("off");
+        boxQuestionEl.classList.remove("on");
+    }
+    if (correctEl.className = "on") {
+        correctEl.classList.add("off");
+        correctEl.classList.remove("on");
+    }
+    if (incorrectEl.className = "on") {
+        incorrectEl.classList.add("off");
+        incorrectEl.classList.remove("on");
+    }
+}
+
+
+btnStart.addEventListener("click", gameStart);
+
+nameForm.addEventListener("submit", savedScore);
+
+viewHighScoreEl.addEventListener("click", displayRecords);
+
+btnBack.addEventListener("click", startPage);
+
+
