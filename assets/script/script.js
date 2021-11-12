@@ -214,3 +214,59 @@ var viewPoints = function() {
 }
 
 // HIGH SCORE FUNCTION //
+var savedScore = function(event) {
+    event.preventDefault();
+    var name = document.querySelector("#name").value;
+    if(!name) {
+        alert("Please enter your name!!!")
+        return;
+    }
+
+    nameForm.reset();
+
+    var record = {
+        name: name,
+        points: points,
+    }
+
+    records.push(record);
+    records.sort((a, b) => {return b.points-a.points});
+
+    for (var i = 0; i < records.length; i++) {
+        var recordsEl = document.createElement("li");
+        records.className = "high-score";
+        records.innerHTML = records[i].name + " - " + records[i].score;
+        highScoreLsEl.appendChild(recordsEl)
+    } while (highScoreLsEl.firstChild) {
+        highScoreLsEl.removeChild(highScoreLsEl.firstChild);
+    }
+
+    saveRecords();
+    displayRecords();
+    
+}
+
+// saving the records //
+var saveRecords = function () {
+    localStorage.setItem("records", JSON.stringify(records))
+}
+
+// pull records in on the loading of page //
+var loadRecords = function() {
+    var loadedRecords = localStorage.getItem("records");
+        if (!loadedRecords) {
+        return false;
+    }
+
+    loadedRecords = JSON.parse(loadedRecords);
+    loadedRecords.sort((a,b) => {return b.points-a.points})
+
+    for (var i = 0; i < loadedRecords.length; i++) {
+        var recordsEl = document.createElement("li");
+        recordsEl.className = "high-score";
+        recordsEl.innerText = loadedRecords[i].name + " - " +loadedRecords[i].score;
+
+        records.push(loadedRecords[i]);
+    }
+    
+}
