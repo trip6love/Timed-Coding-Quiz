@@ -40,34 +40,34 @@ var questions = [
         choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
     },
     { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
+        q: 'You can do everything JS does in HTML.', 
+        a: '2. False', 
+        choices: [{choice: '1. True'}, {choice: '2. False'}]
+    },
+    { 
+        q: 'To form an array you would use?', 
+        a: '3. [ ]', 
+        choices: [{choice: '1. { }'}, {choice: '2. ( )'}, {choice: '3. [ ]'}, {choice: '4. None of The Above'}]
+    },
+    { 
+        q: 'JavaScript can be used to store local data.', 
+        a: '1. True', 
+        choices: [{choice: '1. True'}, {choice: '2. False'}]
+    },
+    { 
+        q: 'To link CSS what would we add to the HTML', 
+        a: '1. <link>', 
         choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
     },
     { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
-        choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
+        q: 'Javascript is a fairly new language.', 
+        a: '2. False', 
+        choices: [{choice: '1. True'}, {choice: '2. False'}]
     },
     { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
-        choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
-    },
-    { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
-        choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
-    },
-    { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
-        choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
-    },
-    { 
-        q: 'To link JavaScript which would be used?', 
-        a: '2. <script>', 
-        choices: [{choice: '1. <link>'}, {choice: '2. <script>'}, {choice: '3. <js>'}, {choice: '4. <href>'}]
+        q: 'To begin saving local data you would use which?', 
+        a: '3. JSON', 
+        choices: [{choice: '1. <link>'}, {choice: '2. GET'}, {choice: '3. JSON'}, {choice: '4. None of the Above'}]
     },
 ];
       
