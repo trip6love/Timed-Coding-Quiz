@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>CODING QUIZ!</title>
-        <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-<!-- ADD MAIN CONTENT -->
-    <body>
-        <!-- Add Header Content -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CODING QUIZ!</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <!-- ADD MAIN CONTENT -->
+    <body> 
+        <!-- ADD HEADER CONTENT -->
         <header>
-            <h3 id="high-scores"> View High Scores! </h3>
+            <h3 id="high-scores"> View High Scores! </h3> 
             <h3 class="time">Time: <span id="time"> </span> </h3>
         </header>
 
-        <!-- Add Content -->
+        <!-- ADD CONTENT-->
 
-        <!-- Starting Screen -->
+        <!-- STARTING SCREEN -->
         <div id="home-box" class="on">
             <div class="box start">
-                <h1>Coding Quiz Challenge!</h1>
+
+                <h1>Coding Quiz Challenge</h1> 
+
                 <p>
-                    Answer the following questions on coding-related topics to the best of your ability, and within the time limit! If you answer the question correctly you will gain 8 points! However, if you answer the question incorrectly your score will be penalized by 3 points and the time will subtract 5 seconds. GOODLUCK! 
+                    Answer the following questions on coding-related topics to the best of your ability, and within the time limit! If you answer the question correctly you will gain 8 points! However, if you answer the question incorrectly your score will be penalized by 3 points and the time will subtract 5 seconds. GOODLUCK!
                 </p>
-                <button class="btn start" id="start-quiz">Start Quiz!</button>
-            </div>
+
+                <button class="btn start" id="start-quiz">Start Coding Quiz!</button>
+
+            </div>    
         </div>
 
-        <!-- Add Questions -->
+        <!-- ADD QUESTIONS -->
         <div id="question-box" class="off">
             <div class="box questions">
-                <div class="question"></div>
+                <div id="question"></div>
                 <div id="answer-buttons" class="btn-list"></div>
             </div>
         </div>
 
-        <!-- End Screen -->
+        <!-- END SCREEN -->
         <div id="end-box" class="off">
-            <div class="box end">
-                <div id="score-banner">
+           <div class="box end">
+                <div id=score-tag>
                     <h1>Game Over!</h1>
-                </div>
+                </div>  
                 <form id="name-form" class="name">
-                    <p> Enter your name to save your score:
-                        <input type="text" name="name" id="name" class="text-input"/>
-                        <button class="btn start" id="submit-high-score" type="submit">Submit Score!</button>
-                    </p>
-                </form>
+                    <p> Enter your name to save your score!
+                    <input type="text" name="name" id="name" class="text-input" />
+                    <button class="btn start" id="sumbit-record" type="submit">Submit</button> </p>
+              </form>
             </div>
         </div>
 
-        <!-- High Scores -->
+        <!-- HIGH SCORES-->
         <div id="high-score-box" class="off">
-            <div class="high-score box">
-                <h1 class="high-score">High Scores!</h1>
-                <ol id="high-score-list" class="point-list"></ol>
-            <div>
-                <button class="btn" id="back">Go back</button>
-                <button class="btn" id="clear-records">Clear records</button>
-            </div>
-            </div>
+          <div class="high-scores box">
+            <h1 class="high-score">High Scores!</h1>
+            <ol id="high-score-list" class="point-list"></ol>
+            <!-- BUTTONS -->
+        <div>
+            <button class="btn" id="back">Go back</button>
+            <button class="btn" id="clear-records">Clear Records</button>
         </div>
+        </div>
+    </div>
 
-        <!-- Add messages when player anwers correct or not -->
-        <div class="off" id="correct">
-            <h3>Correct! Keep going!</h3>
-        </div>
-        <div class="off" id="incorrect">
-            <h3>Incorrect! Don't give up!</h3>
-        </div>
-
+    <!-- ADD MESSAGES WHEN PLAYER ANSWERS CORRECT OR NOT -->
+    <div class="off" id="correct">
+        <h2>Correct! Keep going!</h2>
+    </div>
+    <div class="off" id="incorrect">
+        <h2>Incorrect! Don't give up!</h2>
+    </div>
 
     <!-- ADD SCRIPT LINK -->
-    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/script.js"></script> 
     </body>
 
-
 </html>
+<!-- END -->

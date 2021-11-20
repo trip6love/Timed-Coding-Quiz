@@ -1,151 +1,134 @@
-/* Add universal styles */
+/* ADD UNIVERSAL STYLES */
 * {
     box-sizing: border-box;
 }
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    margin:auto;
-    width: 85%;
-}
-
-/*  header h3 style */
-header h3 {
-    padding-left: 20px;
-    display:inline;
-}
-
-/* Body styles */
+  
 body {
-    background: white;
+    background: grey;
     color: black;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+  
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 85%;
+}
 
-/* Change color of text when hovering */
+/* WHEN YOU HOVER OVER HIGH SCORE BOX */
 #high-scores:hover {
     cursor: pointer;
-    color: purple;
+    color: hotpink;
 }
 
-/* timer styles */
-.time {
-    text-align: right;
+
+header h3 {
+    padding-left: 20px;
+    font-size: 2.0rem;
     display: inline;
-    padding-right: 20px;
+}
+
+/* STYLES FOR THE TIMER */
+.time {
+    font-size: 2.0rem;
     color: black;
+    display: inline;
+    text-align: right;
+    padding-right: 20px;
 }
 
-/* box styles and main content */
-.box {
-    flex-direction: column;
-    padding: 20px;
-    margin: auto;
-    width: 50%;
-}
-
-/* header 1 */
-
+/* MAIN CONTENT */
 h1 {
     color: black;
+    font-size: 3.0rem;
     font-weight: bold;
 }
 
-/* paragraph style */
 p {
     color: black;
+    font-size: large;
 }
 
-/* Starter styles */
+.box {
+    padding: 20px;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
 .start {
     align-items: center;
     text-align: center;
 }
-
+  
 .start h1, .start p {
     text-align: center;
 }
 
-/* questions styles */
 .questions {
     align-items: flex-start;
-    padding: 40px 20px;
-    margin: auto;
     justify-content: flex-start;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-
-/* END STYLES */
-.end h1, .end p {
-    text-align: left;
-}
-
+/* END BOX STYLES */
 .end input {
-    outline: black, thick;
+    outline: thick; 
+    border-width: 1px;
     padding: 5px;
     width: 40%;
-    border-width: 2px;
-    border-radius: 5px;
+    font-size: large
 }
 
 .end input:focus {
-    border: 3px solid green;
+    border: 2px solid green;
 }
 
+.end h1, .end p {
+    text-align: left
+}
+
+/* HIDDEN/NOT STYLES */
 .on {
     display: flex;
 }
 
-
 .off {
     display: none;
-}
-
-#question {
-    color: black;
-    text-align: left;
-    font-weight: bold;
 }
 
 #high-score {
     text-align: left;
 }
 
-/* Button Styles */
+#question {
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    font-size: x-large;
+}
+
+/*Button Styling */
 .btn {
     background: hotpink;
     color: black;
     padding: 10px;
     border-radius: 10px;
     border: black;
-    box-shadow: 0 4px black;
+    box-shadow: 0 3px black;
+    margin-top: 10px;
 }
 
 .btn-list {
     display: grid;
-    grid-template-rows: repeat(4, auto);
     grid-gap: 5px;
-    margin: 25px 0;
-}
-
-.start {
-    width: 20%;
-    margin-top: 10px;
-}
-
-.answerbtn {
-    width: 50%;
-    text-align: left;
-}
-
-.btn:hover {
-    background: greenyellow;
-    border-radius: 10px;
-    cursor: pointer;
+    grid-template-rows: repeat(4, auto);
+    margin: 15px 0;
 }
 
 .btn:active {
@@ -153,23 +136,49 @@ p {
     outline: none;
 }
 
-/* hidden */
-.banner {
-    font-size: 30px;
-    text-align: center;
-    color: gray;
+.btn:hover {
+    background: rgb(0, 255, 0);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+.start {
+    width: 25%;
+    margin-top: 10px;
+}
+
+.answerbtn {
+    font-size: large;
+    text-align: left;
+    width: 50%;
+}
+
+/* INCORRECT/CORRECT STYLES */
+.tag {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.623);
     margin: 0 100px;
-}
-
-.banner h2 {
-    border-top: 2px solid gray;
-    margin: 0 auto;
     text-align: center;
+    
+}
+
+.tag h2 {
+    border-top: 2px solid rgba(3, 253, 24, 0.623);
+    margin: 0 auto;
     padding-top: 5px;
+    text-align: center;
 }
 
-/* list styles */
+/* List for High Scores */
 ol {
-    list-style-type: decimal; 
+    list-style-type: number;
 }
 
+li:nth-child(odd) {
+     background-color: hotpink;
+}
