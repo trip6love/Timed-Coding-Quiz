@@ -2,7 +2,8 @@
 * {
     box-sizing: border-box;
 }
-  
+
+/* BODY STYLES */
 body {
     background: grey;
     color: black;
@@ -113,6 +114,22 @@ p {
     font-size: x-large;
 }
 
+/* INCORRECT/CORRECT STYLES */
+.tag {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.623);
+    margin: 0 100px;
+    text-align: center;
+    
+}
+
+.tag h2 {
+    border-top: 2px solid rgba(3, 253, 24, 0.623);
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+}
+
 /*Button Styling */
 .btn {
     background: hotpink;
@@ -156,22 +173,6 @@ p {
     font-size: large;
     text-align: left;
     width: 50%;
-}
-
-/* INCORRECT/CORRECT STYLES */
-.tag {
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.623);
-    margin: 0 100px;
-    text-align: center;
-    
-}
-
-.tag h2 {
-    border-top: 2px solid rgba(3, 253, 24, 0.623);
-    margin: 0 auto;
-    padding-top: 5px;
-    text-align: center;
 }
 
 /* List for High Scores */

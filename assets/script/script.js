@@ -2,13 +2,18 @@
 var boxStartEl = document.getElementById("home-box");
 var boxQuestionEl = document.getElementById("question-box");
 var boxScoreEl = document.getElementById("score-tag")
-var nameForm = document.getElementById("name-form")
+var boxEndEl = document.getElementById("end-box")
+
+// HIGH SCORE/END //
 var boxHighScoresEl = document.getElementById("high-score-box")
 var viewHighScoreEl = document.getElementById("high-scores")
 var lsHighScoreEl = document.getElementById("high-score-list")
+var nameForm = document.getElementById("name-form")
+
+// CORRECT INCORRECT
 var correctEl = document.getElementById("correct")
 var incorrectEl = document.getElementById("incorrect")
-var boxEndEl = document.getElementById("end-box")
+
 
 // QUESTIONS //
 var questionsEl = document.getElementById("question")
@@ -68,6 +73,16 @@ var questions = [
         q: 'To begin saving local data you would use which?', 
         a: '3. JSON', 
         choices: [{choice: '1. <link>'}, {choice: '2. GET'}, {choice: '3. JSON'}, {choice: '4. None of the Above'}]
+    },
+    {
+        q: 'A working clock could be created in HTML', 
+        a: '2. False', 
+        choices: [{choice: '1. True'}, {choice: '2. False'}]
+    },
+    {
+        q: 'You can add styling through JS', 
+        a: '1. True', 
+        choices: [{choice: '1. True'}, {choice: '2. False'}]
     },
 ];
       
@@ -184,8 +199,6 @@ var checkAnswer = function(event) {
             points = points - 1;
             timeleft = timeleft - 5;
         };
-
-        //
         questionIndex++
         if  (randomQuestions.length > questionIndex + 1) {
             setQuestion()
@@ -193,8 +206,6 @@ var checkAnswer = function(event) {
             gameover = "true";
             viewPoints();
         }
-    
-    
 }
 
 // SHOW POINTS AT END OF GAME //
@@ -267,7 +278,6 @@ var loadRecords = function () {
         lsHighScoreEl.appendChild(recordsEl);
 
         records.push(loadedRecords[i]);
-            
     }
 }  
 
@@ -281,22 +291,19 @@ var displayRecords = function() {
     if (boxEndEl.className = "on") {
         boxEndEl.classList.remove("on");
         boxEndEl.classList.add("off");
-        }
+    }
     if (boxStartEl.className = "on") {
         boxStartEl.classList.remove("on");
         boxStartEl.classList.add("off");
-        }
-            
+    }     
     if (boxQuestionEl.className = "on") {
         boxQuestionEl.classList.remove("on");
         boxQuestionEl.classList.add("off");
-        }
-
+    }
     if (correctEl.className = "on") {
         correctEl.classList.remove("on");
         correctEl.classList.add("off");
     }
-
     if (incorrectEl.className = "on") {
         incorrectEl.classList.remove("on");
         incorrectEl.classList.add("off");
